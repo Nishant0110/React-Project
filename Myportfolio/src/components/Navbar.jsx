@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import{ useEffect, useState } from "react";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -10,12 +10,6 @@ const Navbar = () => {
     { name: "PROJECTS", link: "#projects" },
     { name: "CONTACT", link: "#contact" },
   ];
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const nav = document.querySelector("nav");
-      window.scrollY > 0 ? setSticky(true) : setSticky(false);
-    });
-  }, []);
   return (
     <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky ? "bg-slate-700  text-gray-900" : "text-white"}`}>
       <div className="flex items-center justify-between">

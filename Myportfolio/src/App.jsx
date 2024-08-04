@@ -1,5 +1,3 @@
-
-import './App.css'
 import Bot from './components/Bot'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'

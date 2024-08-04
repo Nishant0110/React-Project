@@ -1,15 +1,10 @@
-import React from "react";
-import { useState } from "react";
 const About = () => {
-  const [showCV, setShowCV] = useState(false);
   const info = [
-    { text: "Years experience", count: "08" },
-    { text: "Completed Projects", count: "235" },
+    { text: "Years experience", count: "07" },
+    { text: "Completed Projects", count: "240" },
     { text: "Companies Work", count: "06" },
   ];
-  const handleCVDownload = () => {
-    setShowCV(true);
-  };
+
   return (
     <section id="about" className="py-10 text-white">
       <div className="text-center mt-8">
@@ -39,21 +34,6 @@ const About = () => {
                 ))}
               </div>
               <br />
-              <br />
-
-              <button className="btn-primary" onClick={handleCVDownload}>
-                Download CV
-              </button>
-              {showCV && (
-                <iframe
-                  src="../src/assets/CV.pdf"
-                  title="CV"
-                  width="100%"
-                  height="500px"
-                  style={{ border: "1px solid #ddd" }}
-                  className="mt-4 sm:none md:block "
-                />
-              )}
             </div>
           </div>
         </div>
